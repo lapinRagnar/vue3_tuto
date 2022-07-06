@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:disabled="isDisabled">valider</button>
+  <h2 class="souligner">souligner ce text</h2>
 </template>
 
 <script>
@@ -22,4 +22,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.souligner{
+  text-decoration: underline;
+}
+
 </style>
