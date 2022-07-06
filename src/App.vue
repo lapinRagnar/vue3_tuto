@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:id="nomId"></div>
+  <button v-bind:disabled="isDisabled">valider</button>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: 'App',
   data(){
     return {
-      nomId: "mon_super_id_a_ajouter_dans_le_tag"
+      isDisabled: true
     }
   }
 }
