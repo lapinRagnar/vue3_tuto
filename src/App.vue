@@ -1,5 +1,6 @@
 <template>
   <div>{{maVariable}}</div>
+  <div v-text="nom"></div>
 </template>
 
 <script>
@@ -7,7 +8,8 @@ export default {
   name: 'App',
   data(){
     return {
-      maVariable: 'Bonjour'
+      maVariable: 'Bonjour',
+      nom: "lapinragnar"
     }
   }
 }
