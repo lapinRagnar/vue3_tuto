@@ -1,5 +1,5 @@
 <template>
-  <div v-html="nom"></div>
+  <div v-bind:id="nomId"></div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: 'App',
   data(){
     return {
-      nom: "<b>lapinragnar manaona o:</b>"
+      nomId: "mon_super_id_a_ajouter_dans_le_tag"
     }
   }
 }
