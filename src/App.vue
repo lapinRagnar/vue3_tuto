@@ -1,5 +1,5 @@
 <template>
-  <h2 v-bind:class="status">souligner ce text</h2>
+  <h2 v-bind:class="isPromoted && 'promoted'">on ajoute une classe css promoted quand isPromoted=true</h2>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: 'App',
   data(){
     return {
-      status: 'success'
+      isPromoted: true
     }
   }
 }
@@ -22,8 +22,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.souligner{
-  text-decoration: underline;
+.promoted{
+  color: #95bc4c;
+  font-size: 40px;
 }
 
 </style>
