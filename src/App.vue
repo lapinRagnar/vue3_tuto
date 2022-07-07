@@ -1,5 +1,9 @@
 <template>
-  <div v-for="(f, index) in fullName" :key="index"> {{index}} - {{ f.first}} {{ f.last }}</div>
+  <div v-for="(a, index) in actors" :key="index"> 
+    <h1>{{ a.name}}</h1>
+    <p v-for="(m,i) in a.movies" :key="i"> {{ m }} </p>
+  </div>
+  
 </template>
 
 <script>
@@ -7,10 +11,15 @@ export default {
   name: 'App',
   data(){
     return {
-      fullName: [
-        {first: 'piso', last: 'beloha'},
-        {first: 'lava', last: 'rambo'},
-        {first: 'be', last: 'menimenina'},
+      actors: [
+        {
+          name: 'jean claude vandame',
+          movies: ['kick boxing', 'karate man']
+        },
+        {
+          name: 'dicaprio',
+          movies: ['titanic', 'je ne sais pas']
+        }
       ]
     }
   }
