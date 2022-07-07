@@ -1,7 +1,9 @@
 <template>
-  <div v-if="num === 0">number is 0</div>
-  <div v-else-if="num < 0">number is less than 0</div>
-  <div v-else>number is not 0</div>
+  <template v-if="afficher">
+    <div>Afficher</div>
+    <div>plusieurs ligne</div>
+    <div>avec une seule condition</div>
+  </template>
 </template>
 
 <script>
@@ -9,7 +11,7 @@ export default {
   name: 'App',
   data(){
     return {
-      num: -5
+      afficher: true
     }
   }
 }
