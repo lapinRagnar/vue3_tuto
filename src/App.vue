@@ -1,5 +1,5 @@
 <template>
-  <h2 v-bind:class="{new: isNew, sold_out: isSoldOut }">ajout plusieurs class - condition avec un objet</h2>
+  <h2 v-bind:style="{color: couleur, backgroundColor: fond }">ajout inline style - avec un objet</h2>
 </template>
 
 <script>
@@ -7,8 +7,8 @@ export default {
   name: 'App',
   data(){
     return {
-      isNew: true,
-      isSoldOut: true
+      couleur: 'red',
+      fond: 'yellow'
     }
   }
 }
