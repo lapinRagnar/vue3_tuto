@@ -1,5 +1,5 @@
 <template>
-  <h2 v-bind:class="['new', 'sold_out']">ajouter plusieurs class avec un array</h2>
+  <h2 v-bind:class="{new: isNew, sold_out: isSoldOut }">ajout plusieurs class - condition avec un objet</h2>
 </template>
 
 <script>
@@ -7,7 +7,8 @@ export default {
   name: 'App',
   data(){
     return {
-      isNew: true
+      isNew: true,
+      isSoldOut: true
     }
   }
 }
