@@ -1,5 +1,5 @@
 <template>
-  <h2 v-bind:class="isNew ? 'new' : 'sold_out'">on ajoute une classe css avec condition ternaire</h2>
+  <h2 v-bind:class="['new', 'sold_out']">ajouter plusieurs class avec un array</h2>
 </template>
 
 <script>
@@ -25,6 +25,7 @@ export default {
 .sold_out{
   color: #95bc4c;
   font-size: 40px;
+  height: 100px;
 }
 
 .new{
