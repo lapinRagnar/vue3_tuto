@@ -1,7 +1,6 @@
 <template >
   <template v-for="(name, index) in names" :key="index">
-    <div > {{name}} </div>
-    <hr>
+    <div v-if="name === 'nom1'" > {{name}} </div>
   </template>
   
 </template>
