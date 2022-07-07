@@ -1,5 +1,8 @@
-<template>
-  <div v-for="(info, key, index) in myInfo" :key="index"> {{index}} - {{key}} - {{info}} </div>
+<template >
+  <template v-for="(name, index) in names" :key="index">
+    <div > {{name}} </div>
+    <hr>
+  </template>
   
 </template>
 
@@ -8,11 +11,9 @@ export default {
   name: 'App',
   data(){
     return {
-     myInfo: {
-      name: 'lapin',
-      language: 'vue'
-     }
+     names: ['nom1', 'nom2', 'nom3'] 
     }
+    
   }
 }
 </script>
