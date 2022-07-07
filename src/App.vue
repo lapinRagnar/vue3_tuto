@@ -1,5 +1,5 @@
 <template>
-  <div v-show="afficher">comment utiliser v-show</div>
+  <div v-for="(name, index) in names" :key="name"> {{index}} - {{ name}}</div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: 'App',
   data(){
     return {
-      afficher: true
+      names: ['bruce lee', 'clark kent', 'batman']
     }
   }
 }
