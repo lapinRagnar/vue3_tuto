@@ -1,5 +1,5 @@
 <template>
-  <h2 class="souligner">souligner ce text</h2>
+  <h2 v-bind:class="status">souligner ce text</h2>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: 'App',
   data(){
     return {
-      isDisabled: true
+      status: 'success'
     }
   }
 }
