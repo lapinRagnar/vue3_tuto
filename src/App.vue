@@ -1,5 +1,5 @@
 <template>
-  <h2 v-bind:class="isPromoted && 'promoted'">on ajoute une classe css promoted quand isPromoted=true</h2>
+  <h2 v-bind:class="isNew ? 'new' : 'sold_out'">on ajoute une classe css avec condition ternaire</h2>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: 'App',
   data(){
     return {
-      isPromoted: true
+      isNew: true
     }
   }
 }
@@ -22,9 +22,14 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.promoted{
+.sold_out{
   color: #95bc4c;
   font-size: 40px;
+}
+
+.new{
+  color: rebeccapurple;
+  background-color: #95bc4c;
 }
 
 </style>
