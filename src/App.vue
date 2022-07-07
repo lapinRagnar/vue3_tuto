@@ -1,8 +1,8 @@
 <template >
 
-  <h1>Nom : {{ nom }}</h1>
+  <h1>compteur # {{count}}</h1>
   <div>
-    <button @click="changerNom">Changer le nom</button>
+    <button @click="ajouter(4, $event)">ajouter</button>
   </div>
 
 </template>
@@ -12,12 +12,12 @@ export default {
   name: 'App',
   data(){
     return {
-      nom: 'lapin'
+      count: 0
     }    
   },
   methods: {
-    changerNom(event){
-      this.nom = 'sauve souris'
+    ajouter(num, event){
+      this.count += num
       console.log('evenement object', event);
     }
   }
