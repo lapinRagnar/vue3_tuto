@@ -1,11 +1,8 @@
 <template >
 
-  <h1>compteur # {{count}}</h1>
+  <h1>Nom : {{ nom }}</h1>
   <div>
-    <button @click="incrementer(1)">incrementer 1</button>
-    <button @click="incrementer(5)">incrementer 5</button>
-    <button @click="decrementer(1)">decrementer 1</button>
-    <button @click="decrementer(10)">decrementer 10</button>
+    <button @click="changerNom">Changer le nom</button>
   </div>
 
 </template>
@@ -15,15 +12,13 @@ export default {
   name: 'App',
   data(){
     return {
-      count: 0
+      nom: 'lapin'
     }    
   },
   methods: {
-    incrementer(num){
-      return this.count += num
-    },
-    decrementer(num){
-      return this.count -= num
+    changerNom(event){
+      this.nom = 'sauve souris'
+      console.log('evenement object', event);
     }
   }
 }
