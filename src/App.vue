@@ -1,8 +1,9 @@
 <template >
 
-  <h1>{{name}}</h1>
+  <h1>compteur # {{count}}</h1>
   <div>
-    <button v-on:click="name = 'batman'">Changer le nom</button>
+    <button v-on:click="incrementer">incrementer</button>
+    <button v-on:click="decrementer">decrementer</button>
   </div>
 
 </template>
@@ -12,11 +13,16 @@ export default {
   name: 'App',
   data(){
     return {
-      name: 'lapin ragnar'
+      count: 0
     }    
   },
   methods: {
-
+    incrementer(){
+      return this.count += 1
+    },
+    decrementer(){
+      return this.count -= 1
+    }
   }
 }
 </script>
