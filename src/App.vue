@@ -2,8 +2,10 @@
 
   <h1>compteur # {{count}}</h1>
   <div>
-    <button v-on:click="incrementer">incrementer</button>
-    <button v-on:click="decrementer">decrementer</button>
+    <button v-on:click="incrementer(1)">incrementer 1</button>
+    <button v-on:click="incrementer(5)">incrementer 5</button>
+    <button v-on:click="decrementer(1)">decrementer 1</button>
+    <button v-on:click="decrementer(10)">decrementer 10</button>
   </div>
 
 </template>
@@ -17,11 +19,11 @@ export default {
     }    
   },
   methods: {
-    incrementer(){
-      return this.count += 1
+    incrementer(num){
+      return this.count += num
     },
-    decrementer(){
-      return this.count -= 1
+    decrementer(num){
+      return this.count -= num
     }
   }
 }
