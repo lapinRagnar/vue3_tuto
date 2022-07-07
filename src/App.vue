@@ -2,10 +2,10 @@
 
   <h1>compteur # {{count}}</h1>
   <div>
-    <button v-on:click="incrementer(1)">incrementer 1</button>
-    <button v-on:click="incrementer(5)">incrementer 5</button>
-    <button v-on:click="decrementer(1)">decrementer 1</button>
-    <button v-on:click="decrementer(10)">decrementer 10</button>
+    <button @click="incrementer(1)">incrementer 1</button>
+    <button @click="incrementer(5)">incrementer 5</button>
+    <button @click="decrementer(1)">decrementer 1</button>
+    <button @click="decrementer(10)">decrementer 10</button>
   </div>
 
 </template>
