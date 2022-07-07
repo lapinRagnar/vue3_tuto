@@ -1,5 +1,5 @@
 <template>
-  <h2 v-bind:style="{color: couleur, backgroundColor: fond }">ajout inline style - avec un objet</h2>
+  <h2 v-bind:style="monStyle">ajout inline style - avec un objet</h2>
 </template>
 
 <script>
@@ -7,8 +7,13 @@ export default {
   name: 'App',
   data(){
     return {
-      couleur: 'red',
-      fond: 'yellow'
+      monStyle: {
+        color: 'red',
+        height: '100px',
+        width: '300px',
+        borderRadius: '10px',
+        'background-color': 'orange'
+      }
     }
   }
 }
