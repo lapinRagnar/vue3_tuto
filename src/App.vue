@@ -1,8 +1,8 @@
 <template >
-  <template v-for="(name, index) in names" :key="index">
-    <div v-if="name === 'nom1'" > {{name}} </div>
-  </template>
-  
+
+  <p>fonction ajouter - {{add(2, 2, 2)}} </p>
+  <p>fonction multiplication - {{ multiply(2) }} </p>  
+
 </template>
 
 <script>
@@ -10,9 +10,16 @@ export default {
   name: 'App',
   data(){
     return {
-     names: ['nom1', 'nom2', 'nom3'] 
+      baseMultiplication: 5
+    }    
+  },
+  methods: {
+    add(a, b, c) {
+      return a + b + c
+    },
+    multiply(num) {
+      return num * this.baseMultiplication
     }
-    
   }
 }
 </script>
