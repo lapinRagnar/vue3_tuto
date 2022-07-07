@@ -1,9 +1,5 @@
 <template>
-  <template v-if="afficher">
-    <div>Afficher</div>
-    <div>plusieurs ligne</div>
-    <div>avec une seule condition</div>
-  </template>
+  <div v-show="afficher">comment utiliser v-show</div>
 </template>
 
 <script>
