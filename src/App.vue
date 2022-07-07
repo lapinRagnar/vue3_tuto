@@ -1,7 +1,9 @@
 <template >
 
-  <p>fonction ajouter - {{add(2, 2, 2)}} </p>
-  <p>fonction multiplication - {{ multiply(2) }} </p>  
+  <h1>{{name}}</h1>
+  <div>
+    <button v-on:click="name = 'batman'">Changer le nom</button>
+  </div>
 
 </template>
 
@@ -10,16 +12,11 @@ export default {
   name: 'App',
   data(){
     return {
-      baseMultiplication: 5
+      name: 'lapin ragnar'
     }    
   },
   methods: {
-    add(a, b, c) {
-      return a + b + c
-    },
-    multiply(num) {
-      return num * this.baseMultiplication
-    }
+
   }
 }
 </script>
