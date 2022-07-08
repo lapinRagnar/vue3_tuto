@@ -5,15 +5,15 @@
     </pre>
   </div>
 
-  <form @submit="submitForm">
+  <form @submit.prevent="submitForm">
     <div>
       <label for="name">name</label>
-      <input type="text" id="name" v-model="formValues.name">
+      <input type="text" id="name" v-model.trim.lazy="formValues.name">
     </div>
 
     <div>
       <label for="profile">commentaire du profile</label>
-      <textarea name="profile" id="profile" cols="30" rows="10" v-model="formValues.profileSummary"></textarea>
+      <textarea name="profile" id="profile" cols="30" rows="10" v-model.trim.lazy="formValues.profileSummary"></textarea>
     </div>
 
     <div>
@@ -64,6 +64,11 @@
     </div>
 
     <div>
+      <label for="age">age</label>
+      <input type="number" name="age" id="age" v-model.number="formValues.age">
+    </div>
+
+    <div>
       <button>Valider</button>
     </div>
 
@@ -82,13 +87,13 @@ export default {
         jobLocation: [],
         remoteWork: 'no',
         skillSet: [],
-        yearsOfExperience: ''
+        yearsOfExperience: '',
+        age: null
       }
     }    
   },
   methods: {
-    submitForm(event){
-      event.preventDefault();
+    submitForm(){
       console.log('formulaire', this.formValues);
     }
   }
