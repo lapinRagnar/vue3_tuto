@@ -1,5 +1,7 @@
 <template >
   <h2>computed total - {{ total }} </h2>
+  <h2>Method total - {{ getTotal() }} </h2>
+  <button @click="items.push({id: 4, title: 'essai', price: 1500})" >ajouter</button>
 </template>
 
 <script>
@@ -29,6 +31,9 @@ export default {
     }    
   },
   methods: {
+    getTotal(){
+      return this.items.reduce((total, curr) => (total = total + curr.price), 0) 
+    }
   },
   computed: {
     total(){
