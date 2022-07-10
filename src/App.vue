@@ -1,30 +1,26 @@
 <template >
-  <GreetCompo name="clarc" heroName="batman" ></GreetCompo>
-  <GreetCompo name="lady gaga"  heroName="superman" ></GreetCompo>
-  <GreetCompo name="diana" heroName="catwoman" ></GreetCompo>
-  <GreetCompo :name="name"  :heroName="prenom" ></GreetCompo>
-  <hr>
-  <ArticleCompo id="mon-super-id" :likes="2" :isPublished="false"></ArticleCompo>
+  <div>Component App -</div>
+  <ComponentC></ComponentC>
 </template>
 
 <script>
-import GreetCompo from './components/Greet.vue'
-import ArticleCompo from './components/Article.vue'
+
+import ComponentC from './components/ComponentC.vue'
 
 export default {
   name: 'App',
-  components: { GreetCompo, ArticleCompo },
+  components: { ComponentC },
   data(){
     return {
-      name: 'lapin',
-      prenom: 'ragnar'
+      name: 'lapin ragnar'
     }    
+  },
+  provide:{
+    username: 'lapin ragnar',
   },
   methods: {},
   computed: {},
-  watch: {
-   
-  }
+  watch: {}
 }
 </script>
 
