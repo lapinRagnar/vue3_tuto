@@ -1,5 +1,5 @@
 <template >
-  <GreetCompo></GreetCompo>
+  <GreetCompo name="moi meme"></GreetCompo>
 </template>
 
 <script>
