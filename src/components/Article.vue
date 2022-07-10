@@ -1,8 +1,10 @@
 <template>
-  <h2>Article compo</h2>
-  <h4>{{ title}}</h4>
-  <p>nombre de like - {{ likes }}</p>
-  <p>published : {{isPublished ? 'yes' : 'no'}}</p>
+  <div>
+    <h2>Article compo</h2>
+    <h4 v-bind="$attrs" >{{ title}}</h4>
+    <p>nombre de like - {{ likes }}</p>
+    <p>published : {{isPublished ? 'yes' : 'no'}}</p>
+  </div>
 </template>
 
 <script>
@@ -16,7 +18,8 @@ export default {
     },
     likes: Number,
     isPublished: Boolean
-  }
+  },
+  inheritAttrs: false
 }
 </script>
 
