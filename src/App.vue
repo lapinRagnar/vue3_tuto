@@ -7,6 +7,13 @@
     <button @click="volume -= 2">decrease</button>
   </div>
 
+  <!--Immediate and Deep Watchers-->
+  <input type="text" v-model="movie">
+  <input type="text" v-model="movieInfo.title">
+  <input type="text" v-model="movieInfo.actor">
+  <div>
+    <button @click="movieList.push('wonder woman')">ajouter movie</button>
+  </div>
 </template>
 
 <script>
@@ -15,7 +22,13 @@ export default {
   data(){
     return {
       volume: 0,
-      isAlarme: false
+      isAlarme: false,
+      movie: 'batman',
+      movieInfo: {
+        title: '',
+        actor: ''
+      },
+      movieList: ['rambo', 'vandamme']
     }    
   },
   methods: {},
@@ -27,7 +40,25 @@ export default {
       }else {
         this.isAlarme = false
       }
-    }
+    },
+    movie: {
+      handler(newValue){
+      console.log(`app de l'api = ${newValue} `);
+      },
+      immediate: true
+    },
+    movieInfo: {
+      handler(newValue){
+        console.log(`app avec = ${newValue.title} ## ${newValue.actor} `);
+      },
+      deep: true
+    },
+    movieList: {
+      handler(newValue){
+        console.log(`liste movie mise à jour ${newValue} `)
+      },
+      deep: true
+    } 
   }
 }
 </script>
