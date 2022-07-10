@@ -3,13 +3,17 @@
   <GreetCompo name="lady gaga"  heroName="superman" ></GreetCompo>
   <GreetCompo name="diana" heroName="catwoman" ></GreetCompo>
   <GreetCompo :name="name"  :heroName="prenom" ></GreetCompo>
+  <hr>
+  <ArticleCompo title="titre de l'article" :likes="2" :isPublished="false"></ArticleCompo>
 </template>
 
 <script>
 import GreetCompo from './components/Greet.vue'
+import ArticleCompo from './components/Article.vue'
+
 export default {
   name: 'App',
-  components: { GreetCompo },
+  components: { GreetCompo, ArticleCompo },
   data(){
     return {
       name: 'lapin',
