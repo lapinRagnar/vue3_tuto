@@ -1,5 +1,7 @@
 <template >
-  <GreetCompo name="moi meme"></GreetCompo>
+  <GreetCompo name="clarc" heroName="batman" ></GreetCompo>
+  <GreetCompo name="lady gaga"  heroName="superman" ></GreetCompo>
+  <GreetCompo name="diana" heroName="catwoman" ></GreetCompo>
 </template>
 
 <script>
