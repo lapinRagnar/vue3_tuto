@@ -13,6 +13,11 @@
   <h2 style="border-bottom: 1px solid blue;">prix supérieur à 200 euro avec v-for et computed property</h2>
   <h4 v-for="item in expensiveItems" :key="item.id">{{ item.title}} ## {{ item.price}}</h4>
 
+  <!--getter et setter avec computed property-->
+  <h2 style="border-bottom: 1px solid blue;">getter et setter avec computed property</h2>
+  <h4>computed fullName - {{ fullName }}</h4>
+  <button @click="changeFullName">Changer le nom</button>
+
 </template>
 
 <script>
@@ -44,6 +49,9 @@ export default {
   methods: {
     getTotal(){
       return this.items.reduce((total, curr) => (total = total + curr.price), 0) 
+    },
+    changeFullName(){
+      this.fullName = 'clark kent'
     }
   },
   computed: {
@@ -52,6 +60,16 @@ export default {
     },
     expensiveItems(){
       return this.items.filter(item => item.price > 200)
+    },
+    fullName: {
+      get(){
+        return `${this.firstName} ** ${this.lastName}`
+      },
+      set(value){
+        const names = value.spit(' ')
+        this.firstName = names[0]
+        this.lastName = names[1]
+      }
     }
   }
 }
