@@ -2,6 +2,7 @@
   <GreetCompo name="clarc" heroName="batman" ></GreetCompo>
   <GreetCompo name="lady gaga"  heroName="superman" ></GreetCompo>
   <GreetCompo name="diana" heroName="catwoman" ></GreetCompo>
+  <GreetCompo :name="name"  :heroName="prenom" ></GreetCompo>
 </template>
 
 <script>
@@ -11,7 +12,8 @@ export default {
   components: { GreetCompo },
   data(){
     return {
-      
+      name: 'lapin',
+      prenom: 'ragnar'
     }    
   },
   methods: {},
