@@ -1,5 +1,5 @@
 <template >
-  <div>Component App -</div>
+  <div>Component App - {{ name }}</div>
   <ComponentC></ComponentC>
 </template>
 
@@ -15,8 +15,10 @@ export default {
       name: 'lapin ragnar'
     }    
   },
-  provide:{
-    username: 'lapin ragnar',
+  provide(){
+    return {
+      username: this.name,
+    }
   },
   methods: {},
   computed: {},
