@@ -4,7 +4,7 @@
   <GreetCompo name="diana" heroName="catwoman" ></GreetCompo>
   <GreetCompo :name="name"  :heroName="prenom" ></GreetCompo>
   <hr>
-  <ArticleCompo title="titre de l'article" :likes="2" :isPublished="false"></ArticleCompo>
+  <ArticleCompo :likes="2" :isPublished="false"></ArticleCompo>
 </template>
 
 <script>

@@ -9,7 +9,11 @@
 export default {
   name: 'ArticleCompo',
   props: {
-    title: String,
+    title: {
+        type: String,
+        required: true,
+        default: 'ceci est le titre par defaut'
+    },
     likes: Number,
     isPublished: Boolean
   }
