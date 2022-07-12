@@ -1,24 +1,20 @@
 <template >
-  <div>Component App - {{ name }}</div>
-  <ComponentC></ComponentC>
+  <div>app compo</div>
+  <button  @click="showPopup=true">afficher popup</button>
+  <PopupCompo v-if="showPopup" @cacher="showPopup = false"/>
 </template>
 
 <script>
 
-import ComponentC from './components/ComponentC.vue'
+import PopupCompo from './components/Popup.vue'
 
 export default {
   name: 'App',
-  components: { ComponentC },
+  components: {PopupCompo},
   data(){
     return {
-      name: 'lapin ragnar'
+      showPopup: false
     }    
-  },
-  provide(){
-    return {
-      username: this.name,
-    }
   },
   methods: {},
   computed: {},
