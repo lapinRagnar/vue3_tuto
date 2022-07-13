@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <p>je suis dans card </p>
-    <p>{{content}}</p>  
+    <slot>Default content</slot> 
   </div>
 </template>
 

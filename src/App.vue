@@ -1,7 +1,12 @@
 <template >
   <div>Bonjour</div>
-  <card-compo content="card content 1"/>
-  <card-compo content="card content 2" />
+  <CardCompo></CardCompo>
+  <card-compo>Card content 2</card-compo>
+  <card-compo>
+    <h2>Card content 2</h2>
+  </card-compo>
+  <card-compo>Card content 3</card-compo>
+  
 </template>
 
 <script>
