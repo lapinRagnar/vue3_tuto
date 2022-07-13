@@ -5,13 +5,15 @@
   <button @click="activeTab = 'TabB'">Tab B</button>
   <button @click="activeTab = 'TabC'">Tab C</button>
 
-  <TabA v-if="activeTab === 'TabA'"></TabA>
+  <component :is="activeTab" />
+
+  <!-- <TabA v-if="activeTab === 'TabA'"></TabA>
   <TabB v-if="activeTab === 'TabB'"></TabB>
-  <TabC v-if="activeTab === 'TabC'"></TabC>
+  <TabC v-if="activeTab === 'TabC'"></TabC> -->
 
 </template>
 
-<script>
+<script></script>
 
 import TabA from './components/TabA.vue'
 import TabB from './components/TabB.vue'
