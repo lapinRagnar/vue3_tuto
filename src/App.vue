@@ -4,8 +4,9 @@
   <button @click="activeTab = 'TabA'">Tab A</button>
   <button @click="activeTab = 'TabB'">Tab B</button>
   <button @click="activeTab = 'TabC'">Tab C</button>
-
-  <component :is="activeTab" />
+  <keep-alive>
+    <component :is="activeTab" />
+  </keep-alive>
 
   <!-- <TabA v-if="activeTab === 'TabA'"></TabA>
   <TabB v-if="activeTab === 'TabB'"></TabB>
@@ -13,7 +14,7 @@
 
 </template>
 
-<script></script>
+<script>
 
 import TabA from './components/TabA.vue'
 import TabB from './components/TabB.vue'
