@@ -1,12 +1,24 @@
 <template >
-  <div>Bonjour</div>
-  <CardCompo></CardCompo>
-  <card-compo>Card content 2</card-compo>
-  <card-compo>
-    <h2>Card content 2</h2>
-  </card-compo>
-  <card-compo>Card content 3</card-compo>
+  <CardCompo>
+    <template v-slot:header>
+      <h1>Header qui vient du parent</h1>
+    </template>
+
+    <template v-slot:default>
+      <div>Bonjour du parent</div>
+    </template>
+
+    <template v-slot:footer>
+      <div>le pied de page du parent</div>
+      <div><button>valider</button></div>
+    </template>
+
+
+  </CardCompo>
   
+
+
+
 </template>
 
 <script>
