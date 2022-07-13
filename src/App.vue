@@ -1,35 +1,23 @@
 <template >
-  <CardCompo>
-    <template v-slot:header>
-      <h1>Header qui vient du parent</h1>
+
+  <NameList>
+    <template v-slot:defalut="slotProps">
+      {{slotProps.firstName}} - {{slotProps.lastName}}
     </template>
-
-    <template v-slot:default>
-      <div>Bonjour du parent</div>
-    </template>
-
-    <template v-slot:footer>
-      <div>le pied de page du parent</div>
-      <div><button>valider</button></div>
-    </template>
-
-
-  </CardCompo>
-  
-
-
+  </NameList>
 
 </template>
 
 <script>
 
-import CardCompo from './components/Card.vue'
+import NameList from './components/NameList.vue'
+
 export default {
   name: 'App',
-  components: { CardCompo },
+  components: { NameList },
   data(){
     return {
-      name: ''
+
     }    
   },
   methods: {},
