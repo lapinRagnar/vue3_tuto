@@ -1,15 +1,15 @@
 <template >
   <div>Bonjour</div>
-  <InputCompo />
+  <card-compo content="card content 1"/>
+  <card-compo content="card content 2" />
 </template>
 
 <script>
 
-import InputCompo from './components/Input.vue'
-
+import CardCompo from './components/Card.vue'
 export default {
   name: 'App',
-  components: { InputCompo },
+  components: { CardCompo },
   data(){
     return {
       name: ''
