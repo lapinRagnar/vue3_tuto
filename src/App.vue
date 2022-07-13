@@ -1,19 +1,28 @@
 <template >
 
   <h4>bonjour parent</h4>
-  <child-styles></child-styles>
+  <button @click="activeTab = 'TabA'">Tab A</button>
+  <button @click="activeTab = 'TabB'">Tab B</button>
+  <button @click="activeTab = 'TabC'">Tab C</button>
+
+  <TabA v-if="activeTab === 'TabA'"></TabA>
+  <TabB v-if="activeTab === 'TabB'"></TabB>
+  <TabC v-if="activeTab === 'TabC'"></TabC>
+
 </template>
 
 <script>
 
-import ChildStyles from './components/ChildStyles.vue'
+import TabA from './components/TabA.vue'
+import TabB from './components/TabB.vue'
+import TabC from './components/TabC.vue'
 
 export default {
   name: 'App',
-  components: { ChildStyles },
+  components: { TabA, TabB, TabC },
   data(){
     return {
-
+      activeTab: 'TabA'
     }    
   },
   methods: {},
