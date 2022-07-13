@@ -1,5 +1,6 @@
 <template >
-  <div>app compo</div>
+  <div>app compo - http api request</div>
+  <CreatePost/>
   <PostList/>
 
 </template>
@@ -8,10 +9,11 @@
 
 
 import PostList from './components/PostList.vue'
+import CreatePost from './components/CreatePost.vue'
 
 export default {
   name: 'App',
-  components: { PostList },
+  components: { PostList, CreatePost },
   data(){
     return {}    
   },
