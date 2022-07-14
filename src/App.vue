@@ -1,19 +1,15 @@
 <template >
-  <div>app compo - http api request</div>
-  <CreatePost/>
-  <PostList/>
-
+  <parent-compo></parent-compo>
 </template>
 
 <script>
 
+import ParentCompo from './ParentCompo.vue'
 
-import PostList from './components/PostList.vue'
-import CreatePost from './components/CreatePost.vue'
 
 export default {
   name: 'App',
-  components: { PostList, CreatePost },
+  components: {ParentCompo },
   data(){
     return {}    
   },
