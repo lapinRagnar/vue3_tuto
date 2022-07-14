@@ -1,15 +1,15 @@
 <template >
-  <parent-compo></parent-compo>
+  <PostList></PostList>
 </template>
 
 <script>
 
-import ParentCompo from './ParentCompo.vue'
+import PostList from './components/PostList.vue'
 
 
 export default {
   name: 'App',
-  components: {ParentCompo },
+  components: {PostList },
   data(){
     return {}    
   },
