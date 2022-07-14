@@ -1,15 +1,17 @@
 <template >
-  <PostList></PostList>
+  <div>template ref</div>
+  <TemplateRef></TemplateRef>
 </template>
+
 
 <script>
 
-import PostList from './components/PostList.vue'
 
+import TemplateRef from './components/TemplateRef.vue'
 
 export default {
   name: 'App',
-  components: {PostList },
+  components: { TemplateRef },
   data(){
     return {}    
   },
