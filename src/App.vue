@@ -1,19 +1,17 @@
 <template >
   <h1>Composition api</h1>
-  <demo-one></demo-one>
-  <demo-two/>
+  <methods-compo></methods-compo>
 </template>
 
 
 <script>
 
-import DemoOne from './components/DemoOne.vue'
-import DemoTwo from './components/DemoTwo.vue'
+import MethodsCompo from './components/MethodsCompo.vue'
 
 
 export default {
   name: 'App',
-  components: {DemoOne, DemoTwo},
+  components: {MethodsCompo},
   data(){
     return {}    
   },
