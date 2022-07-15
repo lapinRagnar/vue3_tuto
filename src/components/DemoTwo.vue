@@ -1,14 +1,11 @@
 <template>
-  <h1>reactivity and toRef - exemple 2</h1>
-  <h2>{{state.firstName}} {{state.lastName}}</h2>
-  <h2>ou la 2e methode - pas de reactivite quand on modifie la variable</h2>
-  <h2>{{firstName}} {{lastName}}</h2>
   <h2>il faut utiliser toRefs pour avoir la reactivité</h2>
+  <h2>{{firstName}} {{lastName}}</h2>
 </template>
 
 <script>
 
-import {reactive} from 'vue'
+import {reactive, toRefs} from 'vue'
 export default {
   name: 'DemoTwo',
   setup(){
@@ -23,11 +20,7 @@ export default {
       console.log(state);
     }, 2000);
 
-    return{
-        state,
-        firstName: state.firstName,
-        lastName: state.lastName,
-    }
+    return toRefs(state)
   }
 
 }
