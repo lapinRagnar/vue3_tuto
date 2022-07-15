@@ -1,17 +1,19 @@
 <template >
-  <div>Composition api</div>
-  <data-compo/>
+  <h1>Composition api</h1>
+  <demo-one></demo-one>
+  <demo-two/>
 </template>
 
 
 <script>
 
-import DataCompo from './components/DataCompo.vue'
+import DemoOne from './components/DemoOne.vue'
+import DemoTwo from './components/DemoTwo.vue'
 
 
 export default {
   name: 'App',
-  components: { DataCompo},
+  components: {DemoOne, DemoTwo},
   data(){
     return {}    
   },
