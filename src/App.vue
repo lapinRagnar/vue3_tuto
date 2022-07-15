@@ -1,17 +1,17 @@
 <template >
   <h1>Composition api</h1>
-  <methods-compo></methods-compo>
+  <v-model></v-model>
 </template>
 
 
 <script>
 
-import MethodsCompo from './components/MethodsCompo.vue'
+import VModel from './components/VModel.vue'
 
 
 export default {
   name: 'App',
-  components: {MethodsCompo},
+  components: {VModel},
   data(){
     return {}    
   },
