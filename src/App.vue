@@ -1,17 +1,17 @@
 <template >
   <h1>Composition api</h1>
-  <v-model></v-model>
+  <ComputedCompo/>
 </template>
 
 
 <script>
 
-import VModel from './components/VModel.vue'
+import ComputedCompo from './components/ComputedCompo.vue'
 
 
 export default {
   name: 'App',
-  components: {VModel},
+  components: {ComputedCompo},
   data(){
     return {}    
   },
