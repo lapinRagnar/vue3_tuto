@@ -4,10 +4,12 @@
     <input type="text" placeholder="name" v-model="name">
   </div>
 
-  <h1>watch avec composition api - ref</h1>
+  <h1>watch avec composition api - ref - une source</h1>
   <input type="text" placeholder="First Name" v-model="firstName">
 
-
+  <h1>watch avec composition api - ref - plusieurs sources</h1>
+  <input type="text" placeholder="First Name" v-model="firstName">
+  <input type="text" placeholder="Last Name" v-model="lastName">
 
 </template>
 
@@ -30,14 +32,18 @@ export default {
   },
   setup(){
     const firstName = ref('')
+    const lastName = ref('wayne')
 
-    watch(firstName, (newValue, oldValue)=>{
-      console.log('oldValue', oldValue)
-      console.log('newValue', newValue);
+    watch([firstName, lastName], (newValues, oldValues)=>{
+      console.log('firstname oldValue', oldValues[0])
+      console.log('firstname newValue', newValues[0])
+      console.log('lastName oldValue', oldValues[1])
+      console.log('lastname newValue', newValues[1])
     })
 
     return {
-        firstName
+        firstName,
+        lastName
     }
   }
 
