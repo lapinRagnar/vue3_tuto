@@ -1,17 +1,17 @@
 <template >
   <h1>Composition api</h1>
-  <WatchCompo/>
+  <ProvideInject/>
 </template>
 
 
 <script>
 
-import WatchCompo from './components/Watch.vue'
+import ProvideInject from './components/ProvideInject.vue'
 
 
 export default {
   name: 'App',
-  components: {WatchCompo},
+  components: {ProvideInject},
   data(){
     return {}    
   },
