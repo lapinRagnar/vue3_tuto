@@ -1,19 +1,18 @@
 <template >
   <h1>Composition api</h1>
-  <LifecycleOptions/>
-  <LifecycleComposition/>
+  <TemplateRef/>
+
 </template>
 
 
 <script>
 
-import LifecycleOptions from './components/LifecycleOptions.vue'
-import LifecycleComposition from './components/LifecycleComposition.vue'
+import TemplateRef from './components/TemplateReference.vue'
 
 
 export default {
   name: 'App',
-  components: {LifecycleOptions, LifecycleComposition},
+  components: {TemplateRef},
   data(){
     return {}    
   },
