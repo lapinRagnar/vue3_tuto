@@ -44,12 +44,19 @@ export default {
       lName: ''
     })
 
-    watch(()=>{return {...state}}, function(newValue, oldValue){
-      console.log('fName oldValue', oldValue.fName)
-      console.log('fName newValue', newValue.fName)
-      console.log('fName oldValue', oldValue.fName)
-      console.log('fName oldValue', newValue.fName)
+    // modifie toute les proprieté
+    // watch(()=>{return {...state}}, function(newValue, oldValue){
+    //   console.log('fName oldValue', oldValue.fName)
+    //   console.log('fName newValue', newValue.fName)
+    //   console.log('fName oldValue', oldValue.fName)
+    //   console.log('fName oldValue', newValue.fName)
+    // })
+
+    watch(()=>state.fName, function(newValue, oldValue){
+        console.log('newValue', newValue)
+        console.log('oldValue', oldValue);
     })
+
 
     watch([firstName, lastName], (newValues, oldValues)=>{
       console.log('firstname oldValue', oldValues[0])
