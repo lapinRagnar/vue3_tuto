@@ -1,17 +1,17 @@
 <template >
   <h1>Composition api</h1>
-  <ComputedCompo/>
+  <WatchCompo/>
 </template>
 
 
 <script>
 
-import ComputedCompo from './components/ComputedCompo.vue'
+import WatchCompo from './components/Watch.vue'
 
 
 export default {
   name: 'App',
-  components: {ComputedCompo},
+  components: {WatchCompo},
   data(){
     return {}    
   },
