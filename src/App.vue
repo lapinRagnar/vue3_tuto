@@ -1,17 +1,19 @@
 <template >
   <h1>Composition api</h1>
-  <ProvideInject/>
+  <LifecycleOptions/>
+  <LifecycleComposition/>
 </template>
 
 
 <script>
 
-import ProvideInject from './components/ProvideInject.vue'
+import LifecycleOptions from './components/LifecycleOptions.vue'
+import LifecycleComposition from './components/LifecycleComposition.vue'
 
 
 export default {
   name: 'App',
-  components: {ProvideInject},
+  components: {LifecycleOptions, LifecycleComposition},
   data(){
     return {}    
   },
