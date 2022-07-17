@@ -6,6 +6,7 @@
 
 <script>
 
+import {provide} from 'vue'
 import ChildA from './ChildA.vue'
 
 export default {
@@ -20,6 +21,9 @@ export default {
     return {
         userName: this.name
     }
+  },
+  setup(){
+    provide('c_userName', 'lapinbe')
   }
 }
 </script>
