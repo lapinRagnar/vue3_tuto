@@ -1,5 +1,5 @@
 <template>
-  <h2>templateRef avec - option api</h2>
+  <h2>templateRef avec - composition api</h2>
   <input type="text" placeholder="tapez texte" ref="inputRef">
   
   
@@ -7,11 +7,22 @@
 
 <script>
 
+import {ref, onMounted} from 'vue'
 
 export default {
+  
   name: 'TemplateRefere',
-  mounted(){
-    this.$refs.inputRef.focus()
+
+  setup(){
+    const inputRef = ref(null)
+    
+    onMounted(()=>{
+      inputRef.value.focus()
+    })
+
+    return {
+        inputRef,
+    }
   }
 }
 </script>
