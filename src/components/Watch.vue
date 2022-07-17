@@ -16,11 +16,15 @@
   <input type="text" placeholder="reactive first Name" v-model="fName">
   <input type="text" placeholder="reactive last Name" v-model="lName">
 
+  <h1>watch avec composition api - reactive et toRefs - deep watch </h1>
+  <input type="text" placeholder="reactive hero Name" v-model="options.heroName">
+
 </template>
 
 <script>
 
 import {ref, toRefs, watch, reactive} from 'vue'
+import _ from 'lodash'
 
 export default {
   name: 'WatchCompo',
@@ -41,7 +45,10 @@ export default {
 
     const state = reactive({
       fName: '',
-      lName: ''
+      lName: '',
+      options: {
+        heroName: ''
+      }
     })
 
     // modifie toute les proprieté
@@ -56,6 +63,12 @@ export default {
         console.log('newValue', newValue)
         console.log('oldValue', oldValue);
     })
+
+    // deep 
+    watch(()=> _.cloneDeep(state.options) , function(newValue, oldValue){
+        console.log('newValue', newValue)
+        console.log('oldValue', oldValue);
+    }, {deep: true})
 
 
     watch([firstName, lastName], (newValues, oldValues)=>{
