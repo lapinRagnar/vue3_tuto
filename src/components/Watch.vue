@@ -4,7 +4,7 @@
     <input type="text" placeholder="name" v-model="name">
   </div>
 
-  <h1>watch avec composition api - ref - une source</h1>
+  <h1>immediate watch avec composition api - ref - une source</h1>
   <input type="text" placeholder="First Name" v-model="firstName">
 
   <h1>watch avec composition api - ref - plusieurs sources</h1>
@@ -39,7 +39,7 @@ export default {
       console.log('firstname newValue', newValues[0])
       console.log('lastName oldValue', oldValues[1])
       console.log('lastname newValue', newValues[1])
-    })
+    }, {immediate: true})
 
     return {
         firstName,
