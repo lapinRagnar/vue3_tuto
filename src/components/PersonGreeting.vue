@@ -1,6 +1,6 @@
 <template>
   <h2>person greeting</h2>
-  <div>bonjour {{firstName}} {{lastName}}</div>
+  <div>bonjour {{fullName}}</div>
 </template>
 
 <script>
@@ -8,7 +8,12 @@
 
 export default {
   name: 'PersonGreeting',
-  props: ['firstName', 'lastName']
+  props: ['firstName', 'lastName'],
+  computed:{
+    fullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+  }
 }
 </script>
 
