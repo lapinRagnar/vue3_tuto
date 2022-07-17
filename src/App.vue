@@ -1,18 +1,18 @@
 <template >
   <h1>Composition api</h1>
-  <TemplateRef/>
+  <PersonCompo/>
 
 </template>
 
 
 <script>
 
-import TemplateRef from './components/TemplateReference.vue'
+import PersonCompo from './components/Person.vue'
 
 
 export default {
   name: 'App',
-  components: {TemplateRef},
+  components: {PersonCompo},
   data(){
     return {}    
   },
