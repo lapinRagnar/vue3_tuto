@@ -11,11 +11,16 @@
   <input type="text" placeholder="First Name" v-model="firstName">
   <input type="text" placeholder="Last Name" v-model="lastName">
 
+
+  <h1>watch avec composition api - reactive et toRefs - modifie tte les propriete </h1>
+  <input type="text" placeholder="reactive first Name" v-model="fName">
+  <input type="text" placeholder="reactive last Name" v-model="lName">
+
 </template>
 
 <script>
 
-import {ref, watch} from 'vue'
+import {ref, toRefs, watch, reactive} from 'vue'
 
 export default {
   name: 'WatchCompo',
@@ -34,6 +39,18 @@ export default {
     const firstName = ref('')
     const lastName = ref('wayne')
 
+    const state = reactive({
+      fName: '',
+      lName: ''
+    })
+
+    watch(()=>{return {...state}}, function(newValue, oldValue){
+      console.log('fName oldValue', oldValue.fName)
+      console.log('fName newValue', newValue.fName)
+      console.log('fName oldValue', oldValue.fName)
+      console.log('fName oldValue', newValue.fName)
+    })
+
     watch([firstName, lastName], (newValues, oldValues)=>{
       console.log('firstname oldValue', oldValues[0])
       console.log('firstname newValue', newValues[0])
@@ -43,7 +60,8 @@ export default {
 
     return {
         firstName,
-        lastName
+        lastName,
+        ...toRefs(state)
     }
   }
 
