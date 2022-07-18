@@ -15,7 +15,7 @@ export default {
   // mixins: [CounterMixin],
   setup(){
   
-    const {count, incrementCount} = useCounter()
+    const {count, incrementCount} = useCounter(100, 10)
     
     return {
       count,
