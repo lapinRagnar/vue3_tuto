@@ -1,18 +1,20 @@
 <template >
   <h1>Composition api</h1>
-  <PersonCompo/>
+  <ClickCounter/>
+  <HoverCounter/>
 
 </template>
 
 
 <script>
 
-import PersonCompo from './components/Person.vue'
+import ClickCounter from './components/ClickCounter.vue'
+import HoverCounter from './components/HoverCounter.vue'
 
 
 export default {
   name: 'App',
-  components: {PersonCompo},
+  components: {ClickCounter, HoverCounter},
   data(){
     return {}    
   },

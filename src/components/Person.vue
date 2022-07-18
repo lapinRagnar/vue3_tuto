@@ -1,9 +1,6 @@
 <template>
-  <h2>props avec - composition api</h2>
-  <div>
-    <input type="text" placeholder="first name" v-model="firstName" >
-    <input type="text" placeholder="last name" v-model="lastName">
-  </div>
+  <h2>reusability - composition api</h2>
+
 
   <PersonGreeting :firstName="firstName" :lastName="lastName" @callHeroes="callHeroes"/>
 

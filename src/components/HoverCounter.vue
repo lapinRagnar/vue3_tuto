@@ -7,11 +7,21 @@
 
 <script>
 
-import CounterMixin from '../mixins/counter' 
+// import CounterMixin from '../mixins/counter' 
+import useCounter from '@/composables/useCounter'
 
 export default {
   name: 'HoverCounter',
-  mixins: [CounterMixin] 
+  // mixins: [CounterMixin] 
+  setup(){
+  
+    const {count, incrementCount} = useCounter()
+    
+    return {
+      count,
+      incrementCount
+    }
+  } 
 }
 </script>
 
