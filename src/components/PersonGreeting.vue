@@ -5,15 +5,26 @@
 
 <script>
 
+import {computed} from 'vue'
 
 export default {
   name: 'PersonGreeting',
   props: ['firstName', 'lastName'],
-  computed:{
-    fullName(){
-        return `${this.firstName} ${this.lastName}`
+  setup(props){
+    const fullName = computed(()=>{
+    
+    return `${props.firstName} ${props.lastName}`
+    })
+
+    return {
+        fullName,
     }
-  }
+  },
+//   computed:{
+//     fullName(){
+//         return `${this.firstName} ${this.lastName}`
+//     }
+//   }
 }
 </script>
 

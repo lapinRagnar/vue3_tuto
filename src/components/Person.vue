@@ -1,5 +1,5 @@
 <template>
-  <h2>props avec - option api</h2>
+  <h2>props avec - composition api</h2>
   <div>
     <input type="text" placeholder="first name" v-model="firstName" >
     <input type="text" placeholder="last name" v-model="lastName">
