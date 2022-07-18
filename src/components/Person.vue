@@ -5,7 +5,7 @@
     <input type="text" placeholder="last name" v-model="lastName">
   </div>
 
-  <PersonGreeting :firstName="firstName" :lastName="lastName" />
+  <PersonGreeting :firstName="firstName" :lastName="lastName" @callHeroes="callHeroes"/>
 
 </template>
 
@@ -21,11 +21,18 @@ export default {
     const firstName = ref('')
     const lastName = ref('') 
 
-    return {
-        firstName,
-        lastName,
+    function callHeroes(hero){
+      alert(`calling ==> ${hero}`)
+      console.log(hero);
     }
-  }
+
+    return {
+      firstName,
+      lastName,
+      callHeroes
+    }
+  },
+  emits: ['callHeroes']
 }
 </script>
 
